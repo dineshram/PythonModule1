@@ -12,6 +12,8 @@ def doubleAlternateDigits(number):
     for i in range(0, len(number)):
         if(i % 2 == 0):
             doubleOfDigits.append(int(number[i])*2)
+        else:
+            doubleOfDigits.append(int(number[i]))
 
 doubleAlternateDigits(myCreditCardNumber)
 
