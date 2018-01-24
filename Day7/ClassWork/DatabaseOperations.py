@@ -20,4 +20,17 @@ sql = """CREATE TABLE Product(
     Price real,
     Primary Key(ProductID))"""
 
-createDatabase("restaurant.db", sql)
+#createDatabase("restaurant.db", sql)
+
+
+def insertDataIntoTable(dbName, item):
+    with sqlite3.connect(dbName) as db:
+        cursor = db.cursor()
+        sql = 'INSERT INTO PRODUCT (Name,Price) VALUES (?, ?)'
+        cursor.execute(sql, item)
+        db.commit()
+
+item = ("Black Tea", 1.0)
+insertDataIntoTable("restaurant.db", item)
+
+#updateSql = 'update Product SET Name=?, Price =? WHERE ProductID=?'
