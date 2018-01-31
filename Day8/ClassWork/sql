@@ -1,0 +1,8 @@
+
+
+
+SELECT * FROM Film WHERE FilmID IN (32, 48, 75, 115, 119)
+
+
+CREATE TABLE `Product`
+( `ProductId` INTEGER, `Name` TEXT, `Price` REAL, `Availability` INTEGER, `Description` TEXT, `SizeId` INTEGER, `ProductTypeId` INTEGER, PRIMARY KEY(`ProductId`) )
