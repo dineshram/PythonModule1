@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PythonCafe - Make new product</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="main">Home</a></li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">PythonCafe</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Make new product</h1>
+        <form id="newProduct" method="post" action="/makeNewCustomer/">
+            <label for="inputName" class="sr-only">Name</label>
+            <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required
+                   autofocus>
+            <label for="inputPrice" class="sr-only">Price</label>
+            <input type="price" name="inputPrice" id="inputPrice" class="form-control" placeholder="Price"
+                   required autofocus>
+            <label for="availability" class="sr-only">Availability</label>
+            <input type="availability" name="availability" id="availability" class="form-control"
+                   placeholder="Availability"
+                   required autofocus>
+            <label for="description" class="sr-only">Description</label>
+            <input type="description" name="description" id="description" class="form-control" placeholder="Description"
+                   required autofocus>
+            <label for="sizeId" class="sr-only">SizeID</label>
+            <input type="sizeId" name="sizeId" id="sizeId" class="form-control" placeholder="SizeID"
+                   required autofocus>
+            <label for="productTypeID" class="sr-only">ProductTypeID</label>
+            <input type="productTypeID" name="productTypeID" id="productTypeID" class="form-control"
+                   placeholder="ProductTypeID"
+                   required autofocus>
+
+            <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="submit">Create Product</button>
+        </form>
+    </div>
+
+
+    <footer class="footer">
+        <p>&copy; Python Cafe @ Dinesh</p>
+    </footer>
+
+</div>
+</body>
+</html>
