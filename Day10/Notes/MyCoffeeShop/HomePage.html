@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PythonCafe - Home</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="jumbotron">
+        <h2 style="text-align: center">Go Nuts !!</h2>
+        <form id="home" method="post" action="/home/">
+            <!--<button id="btnMakeNewProduct" class="btn btn-lg btn-primary btn-block" type="submit" name="action" value="CreateProduct">Create Product</button>-->
+            <input type="submit" name="action" value="Create Product" class="btn btn-lg btn-primary btn-block">
+            <input type="submit" name="action" value="Create Customer" class="btn btn-lg btn-primary btn-block">
+            <input type="submit" name="action" value="Create Product Type" class="btn btn-lg btn-primary btn-block">
+        </form>
+        <form id="getStuff" method="post" action="/home/">
+             <input type="submit" name="action" value="Get Products" class="btn btn-lg btn-primary btn-block">
+        </form>
+    </div>
+
+
+    <footer class="footer">
+        <p>&copy; Python Cafe @ Dinesh</p>
+    </footer>
+
+</div>
+</body>
+</html>
