@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PythonCafe - Make new customer</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="HomePage.html">Home</a></li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">PythonCafe</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Make new customer</h1>
+        <form id="newCustomer" method="post" action="/makeNewCustomer/">
+            <label for="name" class="sr-only">Name</label>
+            <input type="name" name="name" id="name" class="form-control" placeholder="Name"
+                   required autofocus>
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="email"
+                   required autofocus>
+            <label for="phone" class="sr-only">Phone</label>
+            <input type="phone" name="phone" id="phone" class="form-control"
+                   placeholder="phone" required autofocus>
+            <label for="userName" class="sr-only">User Name</label>
+            <input type="userName" name="userName" id="userName" class="form-control" placeholder="userName"
+                   required autofocus>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="password"
+                   autofocus>
+            <label for="paymentMode" class="sr-only">Payment Mode</label>
+            <input type="paymentMode" name="paymentMode" id="paymentMode" class="form-control"
+                   placeholder="paymentMode"
+                   required autofocus>
+            <label for="address" class="sr-only">Address</label>
+            <input type="address" name="address" id="address" class="form-control"
+                   placeholder="address"
+                   required autofocus>
+             <label for="membershipId" class="sr-only">Membership ID</label>
+            <input type="membershipId" name="membershipId" id="membershipId" class="form-control"
+                   placeholder="membershipId"
+                   required autofocus>
+
+            <button id="btnMakeNewCustomer" class="btn btn-lg btn-primary btn-block" type="submit">Create Customer</button>
+        </form>
+    </div>
+
+
+    <footer class="footer">
+        <p>&copy; Python Cafe @ Dinesh</p>
+    </footer>
+
+</div>
+</body>
+</html>

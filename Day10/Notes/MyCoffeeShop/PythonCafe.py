@@ -31,8 +31,11 @@ class PythonCafe:
     def home(self, action):
         if action == 'Create Product':
             return open('NewProduct.html')
+        if action == 'Create Customer':
+            return open('NewCustomer.html')
         if action == 'Get Products':
             return print(readTableItems(DB_NAME));
+        return
 
     @expose
     def makeNewProduct(self, inputName, inputPrice, availability, description, sizeId, productTypeID):
@@ -42,6 +45,16 @@ class PythonCafe:
         print(item)
         insertDataIntoTable(DB_NAME, item, sql)
         return open('NewProduct.html')
+
+
+    @expose
+    def makeNewCustomer(self, name, email, phone, userName, password, paymentMode, address, membershipId):
+        # read the posted values from the UI
+        sql = 'INSERT INTO CUSTOMER (Name, Email, Phone, UserName, Password, PaymentMode, Address, MembershipId) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+        item = (name, email, phone, userName, password, paymentMode, address, membershipId)
+        print(item)
+        insertDataIntoTable(DB_NAME, item, sql)
+        return open('NewCustomer.html')
 
 
 cherrypy.quickstart(PythonCafe())
